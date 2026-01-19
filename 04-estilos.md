@@ -211,10 +211,10 @@ Ejemplo:
 
 ## 6) Checklist rápido cuando “no se ve” el cambio
 
-# 1) **Guardaste el archivo** (en Codespaces o en tu editor).
-# 2) Hiciste **commit** y **push** al repositorio.
-# 3) Esperaste a que **GitHub Actions** termine (verde).
-# 4) Abriste tu sitio y forzaste recarga:
+- **Guardaste el archivo** (en Codespaces o en tu editor).
+- Hiciste **commit** y **push** al repositorio.
+- Esperaste a que **GitHub Actions** termine (verde).
+- Abriste tu sitio y forzaste recarga:
    - Windows: `Ctrl + F5` o `Ctrl + Shift + R`
    - macOS: `Cmd + Shift + R`
 
