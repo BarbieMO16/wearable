@@ -1,7 +1,8 @@
 ---
 layout: default
 title: pag 2
-nav_order: 6
+nav_order: 1
+parent: Estilos y personalización visual
 ---
 
 Hola
