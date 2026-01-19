@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Estilos y personalización visual
+title: pag 2
 nav_order: 6
 ---
 
