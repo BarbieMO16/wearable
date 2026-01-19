@@ -62,3 +62,8 @@ nav_order: 10
 - `title` aparece en el menú.
 - `nav_order` controla el orden.
 - `layout: default` funciona bien para la mayoría de páginas.
+
+--
+
+## Siguiente sección
+[Estructura del repositorio](02-estructura-del-repo.md)

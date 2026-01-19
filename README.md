@@ -1,4 +1,4 @@
-# Plantilla Just the Docs (para clase)
+# Plantilla Just the Docs
 
 Esta es una **plantilla de documentación** basada en **Just the Docs** (Jekyll) para que:
 
