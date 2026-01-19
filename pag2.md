@@ -1,6 +1,6 @@
 ---
 layout: default
-title: pag 2
+title: Pagina 2
 nav_order: 1
 parent: Estilos y personalización visual
 ---
