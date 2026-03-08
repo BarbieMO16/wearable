@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Inicio
+title: Wearable
 nav_order: 1
 ---
 
-# Plantilla de documentación con Just the Docs
+# Wearable
 
-Este repositorio está diseñado para entender como utilizar la plantilla de repositorio que utiliza **"Just the docs"** de Jekyll y el lenguaje **"Markdown"**:
+Esta pagina contiene todos los mini proyectos y los avances de nuestro proyecto final:
+Han, Sophi y Barbie
 
 1. **Crear y publicar** el sitio en GitHub Pages.
 2. Aprender la **estructura** típica de un repo de documentación.
