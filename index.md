@@ -2,6 +2,7 @@
 layout: default
 title: Wearable
 nav_exclude: true
+body_class: no-sidebar
 ---
 
 <div style="text-align:center">
