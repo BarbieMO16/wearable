@@ -1,7 +1,7 @@
 ---
-layout: default
+layout: page
 title: Wearable Project
-nav_order: 1
+nav_order: true
 ---
 
 # Wearable
