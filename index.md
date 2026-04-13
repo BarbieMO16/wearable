@@ -1,5 +1,7 @@
 ---
 title: "Wearable"
+page-layout: full
+toc: false
 ---
 
 <style>
