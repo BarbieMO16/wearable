@@ -343,3 +343,101 @@ body {
     height: 56px !important;
   }
 }
+
+/* ── Index page full width ───────────────────────────── */
+.main-content {
+  max-width: 1200px !important;
+  padding: 3rem 3rem 6rem !important;
+}
+
+.cards {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+  width: 100% !important;
+  margin: 0 auto 48px !important;
+}
+
+.card {
+  background: var(--white) !important;
+  border: 0.5px solid #e0d8f0 !important;
+  border-radius: var(--radius) !important;
+  padding: 28px 24px 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: border-color 0.2s, transform 0.2s !important;
+  position: relative !important;
+}
+
+.card:hover {
+  border-color: var(--lilac-dark) !important;
+  transform: translateY(-3px) !important;
+  text-decoration: none !important;
+}
+
+.card.featured {
+  border: 2px solid var(--lilac-dark) !important;
+}
+
+.badge {
+  position: absolute !important;
+  top: -13px !important;
+  left: 20px !important;
+  background: var(--lilac) !important;
+  color: var(--text) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  padding: 3px 12px !important;
+  border-radius: 999px !important;
+  border: 0.5px solid var(--lilac-dark) !important;
+}
+
+.card-icon {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 22px !important;
+}
+
+.icon-purple { background: var(--lilac) !important; }
+.icon-teal   { background: var(--green) !important; }
+.icon-coral  { background: var(--pink) !important; }
+
+.card h3 {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  color: var(--text) !important;
+}
+
+.card p {
+  font-size: 13px !important;
+  color: var(--text-soft) !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+}
+
+.card-arrow {
+  margin-top: auto !important;
+  font-size: 13px !important;
+  color: var(--lilac-dark) !important;
+  font-weight: 600 !important;
+}
+
+.hero-tag {
+  background: var(--lilac) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--lilac-dark) !important;
+}
+
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr !important;
+  }
+}
