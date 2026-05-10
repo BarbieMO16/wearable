@@ -55,16 +55,6 @@
   }
   .page-hero p { font-size: 1rem; color: var(--soft); line-height: 1.8; max-width: 500px; margin: 0 auto; }
 
-  .coming-soon {
-    max-width: 500px; margin: 0 auto 8rem;
-    text-align: center; padding: 3rem 2rem;
-    background: var(--white); border: 1.5px dashed #e0d0f0;
-    border-radius: var(--radius); animation: floatIn 0.5s 0.1s ease both;
-  }
-  .coming-soon .icon { font-size: 3rem; margin-bottom: 1rem; }
-  .coming-soon h2 { font-size: 1.1rem; font-weight: 800; color: var(--text); margin-bottom: 0.5rem; }
-  .coming-soon p { font-size: 0.9rem; color: var(--soft); line-height: 1.7; }
-
   footer {
     background: var(--white); border-top: 1.5px solid #f5eeff;
     padding: 1.5rem 3rem; text-align: center;
@@ -91,60 +81,68 @@
   <p>Construcción de una pulsera con LEDs programables. Primer acercamiento al hardware wearable.</p>
 </section>
 
- <div style="max-width: 700px; margin: 0 auto 4rem; padding: 0 2rem; text-align: left;">
+<!-- DESCRIPCIÓN -->
+<div style="max-width: 700px; margin: 0 auto 4rem; padding: 0 2rem; text-align: left;">
   <p style="font-size: 1rem; color: var(--soft); line-height: 1.8;">
     Esta pulsera pasó por muchos cambios a lo largo del semestre. El principal problema fue que el hilo conductor no siempre hacía buen contacto con los LEDs, lo que combinado con el voltaje constante terminó quemando algunos. Además, al ser nuestra primera práctica, fue difícil integrar los componentes electrónicos en un diseño que fuera a la vez funcional y estético. Lo que más nos pasaba era que de cinco LEDs solo funcionaban tres: cualquier roce en el hilo, los pines o las resistencias interrumpía el circuito o los dañaba. Por eso la pulsera pasó por varios rediseños. Más adelante compartiremos fotos de todas las versiones, además del diseño final.
   </p>
 </div>
 
- <!-- DIVISOR -->
+<!-- DIVISOR EVIDENCIAS -->
 <div style="display: flex; align-items: center; gap: 1rem; max-width: 700px; margin: 0 auto 2.5rem; padding: 0 2rem;">
-  <div style="flex: 1; height: 1.5px; background: #f0d0b0;"></div>
-  <p style="font-size: 0.78rem; font-weight: 800; color: var(--peach-dark); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap;">Evidencias</p>
-  <div style="flex: 1; height: 1.5px; background: #f0d0b0;"></div>
+  <div style="flex: 1; height: 1.5px; background: #e0d0f0;"></div>
+  <p style="font-size: 0.78rem; font-weight: 800; color: var(--pink-dark); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap;">Evidencias</p>
+  <div style="flex: 1; height: 1.5px; background: #e0d0f0;"></div>
 </div>
 
-<!-- GALERÍA -->
+<!-- GALERÍA FOTOS -->
 <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 900px; margin: 0 auto 5rem; padding: 0 2rem;">
 
-  <div style="background: var(--white); border: 1.5px dashed #f0d0b0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
-    <img src="foto1.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
+  <div style="background: var(--white); border: 1.5px dashed #e0d0f0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
+    <img src="hilo.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
   </div>
+  <div style="background: var(--white); border: 1.5px dashed #e0d0f0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
+    <img src="pHilo.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
+  </div>
+  <div style="background: var(--white); border: 1.5px dashed #e0d0f0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
+    <img src="textil.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
+  </div>
+  <div style="background: var(--white); border: 1.5px dashed #e0d0f0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
+    <img src="ledtela.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
 
-  <div style="background: var(--white); border: 1.5px dashed #f0d0b0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
-    <img src="foto2.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
-  </div>
-
-  <div style="background: var(--white); border: 1.5px dashed #f0d0b0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
-    <img src="foto3.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
-  </div>
-
-  <div style="background: var(--white); border: 1.5px dashed #f0d0b0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
-    <img src="foto4.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
-  </div>
-
-  <div style="background: var(--white); border: 1.5px dashed #f0d0b0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
-    <img src="foto5.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
-  </div>
-
-  <div style="background: var(--white); border: 1.5px dashed #f0d0b0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
-    <img src="foto6.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
-  </div>
-
-  <div style="background: var(--white); border: 1.5px dashed #f0d0b0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
-    <img src="foto7.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
-  </div>
-
-  <div style="background: var(--white); border: 1.5px dashed #f0d0b0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
-    <img src="foto8.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
-  </div>
 
 </div>
- 
-<div class="coming-soon">
-  <div class="icon">💡</div>
-  <h2>Contenido próximamente</h2>
-  <p>Aquí irá la documentación completa de este proyecto: materiales, proceso, código y resultados.</p>
+
+<!-- DIVISOR VIDEOS -->
+<div style="display: flex; align-items: center; gap: 1rem; max-width: 700px; margin: 0 auto 2.5rem; padding: 0 2rem;">
+  <div style="flex: 1; height: 1.5px; background: #e0d0f0;"></div>
+  <p style="font-size: 0.78rem; font-weight: 800; color: var(--pink-dark); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap;">Videos</p>
+  <div style="flex: 1; height: 1.5px; background: #e0d0f0;"></div>
+</div>
+
+<!-- WIDGETS DE VIDEO -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto 5rem; padding: 0 2rem;">
+
+  <div style="background: var(--white); border: 1.5px dashed #e0d0f0; border-radius: var(--radius); overflow: hidden;">
+    <div style="aspect-ratio: 16/9; background: var(--lilac);">
+      <video src="video1.mp4" controls style="width: 100%; height: 100%; object-fit: cover; display: block;"></video>
+    </div>
+    <div style="padding: 1rem 1.25rem;">
+      <p style="font-size: 0.75rem; font-weight: 800; color: var(--pink-dark); letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 0.3rem;">Evidencia 01</p>
+      <p style="font-size: 0.9rem; color: var(--soft); line-height: 1.6;">Descripción del video aquí.</p>
+    </div>
+  </div>
+
+  <div style="background: var(--white); border: 1.5px dashed #e0d0f0; border-radius: var(--radius); overflow: hidden;">
+    <div style="aspect-ratio: 16/9; background: var(--lilac);">
+      <video src="video2.mp4" controls style="width: 100%; height: 100%; object-fit: cover; display: block;"></video>
+    </div>
+    <div style="padding: 1rem 1.25rem;">
+      <p style="font-size: 0.75rem; font-weight: 800; color: var(--pink-dark); letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 0.3rem;">Evidencia 02</p>
+      <p style="font-size: 0.9rem; color: var(--soft); line-height: 1.6;">Descripción del video aquí.</p>
+    </div>
+  </div>
+
 </div>
 
 <footer>
