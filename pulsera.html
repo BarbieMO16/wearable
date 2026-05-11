@@ -180,6 +180,23 @@
   <p style="font-size: 0.9rem; color: var(--soft); line-height: 1.7; margin-top: 1rem;">
     Demostración de la pulsera funcionando con los LEDs encendidos al completarse el circuito, controlada mediante Arduino.
   </p>
+  <p style="font-size: 0.9rem; color: var(--soft); line-height: 1.7; margin-top: 1rem;">
+   Código del arduino:
+  </p>
+  <p style="font-size: 0.9rem; color: var(--soft); line-height: 1.7; margin-top: 1rem;">
+  const int ledPin = 2;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(ledPin, HIGH); // enciende
+  delay(300);                 // espera 300ms
+  digitalWrite(ledPin, LOW);  // apaga
+  delay(300);                 // espera 300ms
+}
+  </p>
 </div>
 
  
