@@ -136,6 +136,80 @@
   <p class="desc">Documentación completa del desarrollo: concepto, proceso de diseño, manufactura y resultado final.</p>
 </section>
 
+ <!-- DIVISOR MOODBOARD -->
+<div style="display: flex; align-items: center; gap: 1rem; max-width: 900px; margin: 0 auto 2rem; padding: 0 2rem;">
+  <div style="flex: 1; height: 1px; background: var(--red-muted);"></div>
+  <p style="font-size: 0.72rem; font-weight: 800; color: var(--red-light); letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap;">Moodboard</p>
+  <div style="flex: 1; height: 1px; background: var(--red-muted);"></div>
+</div>
+
+<!-- TIRA HORIZONTAL -->
+<div style="overflow-x: auto; padding: 0 2rem 2rem; margin-bottom: 4rem; cursor: grab; scrollbar-width: thin; scrollbar-color: var(--red-muted) var(--surface);">
+  <div style="display: flex; gap: 12px; width: max-content; align-items: flex-end;">
+
+    <!-- foto tall -->
+    <div style="width: 220px; height: 320px; border-radius: 14px; overflow: hidden; flex-shrink: 0; border: 1px solid var(--red-muted);">
+      <img src="foto1.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+    </div>
+
+    <!-- foto short -->
+    <div style="width: 200px; height: 200px; border-radius: 14px; overflow: hidden; flex-shrink: 0; border: 1px solid var(--red-muted);">
+      <img src="foto2.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+    </div>
+
+    <!-- foto tall -->
+    <div style="width: 180px; height: 280px; border-radius: 14px; overflow: hidden; flex-shrink: 0; border: 1px solid var(--red-muted);">
+      <img src="foto3.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+    </div>
+
+    <!-- foto short -->
+    <div style="width: 240px; height: 180px; border-radius: 14px; overflow: hidden; flex-shrink: 0; border: 1px solid var(--red-muted);">
+      <img src="foto4.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+    </div>
+
+    <!-- foto tall -->
+    <div style="width: 200px; height: 300px; border-radius: 14px; overflow: hidden; flex-shrink: 0; border: 1px solid var(--red-muted);">
+      <img src="foto5.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+    </div>
+
+    <!-- foto short -->
+    <div style="width: 180px; height: 220px; border-radius: 14px; overflow: hidden; flex-shrink: 0; border: 1px solid var(--red-muted);">
+      <img src="foto6.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+    </div>
+
+    <!-- foto tall -->
+    <div style="width: 210px; height: 290px; border-radius: 14px; overflow: hidden; flex-shrink: 0; border: 1px solid var(--red-muted);">
+      <img src="foto7.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+    </div>
+
+    <!-- foto short -->
+    <div style="width: 190px; height: 200px; border-radius: 14px; overflow: hidden; flex-shrink: 0; border: 1px solid var(--red-muted);">
+      <img src="foto8.jpg" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+    </div>
+
+  </div>
+</div>
+
+<!-- script para arrastrar con mouse -->
+<script>
+  const slider = document.querySelector('[style*="overflow-x: auto"]');
+  let isDown = false, startX, scrollLeft;
+  slider.addEventListener('mousedown', e => {
+    isDown = true;
+    slider.style.cursor = 'grabbing';
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+  slider.addEventListener('mouseleave', () => { isDown = false; slider.style.cursor = 'grab'; });
+  slider.addEventListener('mouseup', () => { isDown = false; slider.style.cursor = 'grab'; });
+  slider.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    slider.scrollLeft = scrollLeft - (x - startX) * 1.5;
+  });
+</script>
+ 
 <div class="coming-soon">
   <div class="icon">🥀</div>
   <h2>Contenido próximamente</h2>
