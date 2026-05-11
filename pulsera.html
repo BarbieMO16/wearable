@@ -32,8 +32,7 @@
     font-size: 0.85rem; font-weight: 700; color: var(--soft);
     text-decoration: none; background: var(--pink);
     padding: 7px 16px; border-radius: 50px;
-    border: 1.5px solid var(--pink-dark);
-    transition: all 0.2s;
+    border: 1.5px solid var(--pink-dark); transition: all 0.2s;
   }
   .back-btn:hover { background: var(--pink-dark); color: var(--white); }
 
@@ -80,26 +79,44 @@
   <h1>Práctica de pulsera</h1>
   <p>Construcción de una pulsera con LEDs programables. Primer acercamiento al hardware wearable.</p>
 </section>
+
 <!-- CONCEPTO -->
 <div style="max-width: 900px; margin: 0 auto 1rem; padding: 0 2rem;">
   <p style="font-size: 0.75rem; font-weight: 800; color: var(--pink-dark); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.6rem;">Concepto</p>
   <p style="font-size: 1rem; color: var(--soft); line-height: 1.8;">
-    El objetivo de esta práctica fue diseñar y construir una pulsera wearable funcional que integrara cinco LEDs programables mediante hilo conductor. La intención de diseño era crear un accesorio que encendiera sus LEDs automáticamente al abrocharse, combinando electrónica con textil de una manera que resultara cómoda, flexible y visualmente atractiva. Era nuestro primer acercamiento al hardware wearable, por lo que el reto principal fue aprender a unir dos mundos que normalmente no se trabajan juntos: la moda y la electrónica.
+    El objetivo de esta práctica fue diseñar y construir una pulsera wearable funcional que integrara cinco LEDs mediante hilo conductor. La intención era crear un accesorio que encendiera sus LEDs al completarse el circuito al abrocharse, combinando electrónica con textil de una manera cómoda, flexible y visualmente atractiva. Era nuestro primer acercamiento al hardware wearable: aprender a unir moda y electrónica en un mismo objeto.
   </p>
+</div>
+
+<!-- METODOLOGÍA DE DISEÑO -->
+<div style="max-width: 900px; margin: 2rem auto 1rem; padding: 0 2rem;">
+  <p style="font-size: 0.75rem; font-weight: 800; color: var(--pink-dark); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.2rem;">Metodología de diseño</p>
+  <p style="font-size: 1rem; color: var(--soft); line-height: 1.8; margin-bottom: 2rem;">
+    La arquitectura electrónica consistió en cinco LEDs rojos conectados en paralelo, cada uno con una resistencia de 220Ω para protegerlos del voltaje. La fuente de energía fue una pila de 9V. El circuito se diseñó para que los LEDs encendieran al cerrarse el circuito — es decir, al abrocharse la pulsera, los extremos del hilo conductor hacen contacto y completan la conexión. El hilo conductor cosido a lo largo de la pulsera reemplaza los cables tradicionales, integrando la electrónica directamente en el textil.
+  </p>
+</div>
+
+<!-- DIAGRAMAS EN DOS COLUMNAS -->
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 900px; margin: 0 auto 4rem; padding: 0 2rem;">
+  <div style="border: 1.5px dashed #e0d0f0; border-radius: 14px; overflow: hidden;">
+    <img src="diagrama.jpg" alt="Diagrama circuito base" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+  </div>
+  <div style="border: 1.5px dashed #e0d0f0; border-radius: 14px; overflow: hidden;">
+    <img src="diagrama2.jpg" alt="Diagrama circuito con botón" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+  </div>
 </div>
 
 <!-- PROCESO DE MANUFACTURA -->
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 900px; margin: 0 auto 4rem; padding: 0 2rem; align-items: center;">
   <div>
-  <p style="font-size: 0.75rem; font-weight: 800; color: var(--pink-dark); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.6rem;">Proceso de manufactura</p>
-  <p style="font-size: 1rem; color: var(--soft); line-height: 1.8;">
-    El proceso pasó por varias iteraciones. En el primer prototipo usamos tela biotextil de café con jamaica como base, hilo conductor, y cinco LEDs conectados en paralelo con resistencias. El problema principal fue que el hilo no hacía contacto consistente con los pines de los LEDs, lo que provocó que algunos se quemaran por el voltaje constante. Además, intentamos integrar broches impresos en 3D para el cierre, pero no fue posible adaptarlos al diseño final. En el segundo prototipo cambiamos la base a estambre y tela más flexible, lo que mejoró la comodidad en la muñeca, aunque el problema de contacto persistió: de cinco LEDs, regularmente solo funcionaban tres. Cada rediseño nos enseñó algo nuevo sobre cómo manejar el hilo conductor y distribuir mejor las conexiones para minimizar el riesgo de cortocircuito.
-  </p>
-</div>
- <div style="background: var(--white); border: 1.5px dashed #e0d0f0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
-    <img src="disennoP.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+    <p style="font-size: 0.75rem; font-weight: 800; color: var(--pink-dark); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.6rem;">Proceso de manufactura</p>
+    <p style="font-size: 1rem; color: var(--soft); line-height: 1.8;">
+      El proceso pasó por varias iteraciones. En el primer prototipo usamos tela biotextil de café con jamaica como base, hilo conductor cosido a mano, y cinco LEDs conectados en paralelo con resistencias. El problema principal fue que el hilo no hacía contacto consistente con los pines de los LEDs, lo que provocó que algunos se quemaran. Intentamos integrar broches impresos en 3D para el cierre, pero no fue posible adaptarlos. En el segundo prototipo cambiamos la base a estambre azul y tela más flexible, mejorando la comodidad, aunque de cinco LEDs regularmente solo funcionaban tres. Cada rediseño nos enseñó a manejar mejor el hilo conductor y distribuir las conexiones para reducir el riesgo de cortocircuito.
+    </p>
   </div>
-
+  <div style="background: var(--white); border: 1.5px dashed #e0d0f0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
+    <img src="armado.jpg" alt="Pulsera armada" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+  </div>
 </div>
 
 <!-- DIVISOR EVIDENCIAS -->
@@ -109,7 +126,7 @@
   <div style="flex: 1; height: 1.5px; background: #e0d0f0;"></div>
 </div>
 
-<!-- GALERÍA FOTOS -->
+<!-- GALERÍA 4 FOTOS -->
 <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 900px; margin: 0 auto 2rem; padding: 0 2rem;">
   <div style="background: var(--white); border: 1.5px dashed #e0d0f0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
     <img src="hilo.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
@@ -118,7 +135,7 @@
     <img src="pHilo.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
   </div>
   <div style="background: var(--white); border: 1.5px dashed #e0d0f0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
-    <img src="textil.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+    <img src="pulseranormal.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
   </div>
   <div style="background: var(--white); border: 1.5px dashed #e0d0f0; border-radius: 14px; overflow: hidden; aspect-ratio: 1;">
     <img src="ledtela.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
@@ -128,7 +145,7 @@
 <!-- TEXTO FOTOS -->
 <div style="max-width: 900px; margin: 0 auto 4rem; padding: 0 2rem;">
   <p style="font-size: 1rem; color: var(--soft); line-height: 1.8;">
-    En estos prototipos usamos LEDs, hilo conductor, estaño, resistencias y tela biotextil de café con jamaica. Imprimimos unos broches pequeños, pero al final no pudimos adaptarlos al diseño. Usamos estambre y tela para los diferentes prototipos.
+    En estos prototipos usamos LEDs rojos, hilo conductor cosido a mano, resistencias de 220Ω, estaño y estambre azul como base textil. También imprimimos broches en 3D pero no pudimos integrarlos al diseño final. La foto de la derecha muestra la pulsera con los LEDs encendidos al completarse el circuito.
   </p>
 </div>
 
@@ -139,13 +156,16 @@
   <div style="flex: 1; height: 1.5px; background: #e0d0f0;"></div>
 </div>
 
-<!-- WIDGETS DE VIDEO -->
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto 4rem; padding: 0 2rem;">
+<!-- VIDEO -->
+<div style="max-width: 900px; margin: 0 auto 4rem; padding: 0 2rem;">
   <div style="background: var(--white); border: 1.5px dashed #e0d0f0; border-radius: var(--radius); overflow: hidden;">
     <div style="aspect-ratio: 16/9; background: var(--lilac);">
       <video src="pulseravideo.mp4" controls style="width: 100%; height: 100%; object-fit: cover; display: block;"></video>
     </div>
   </div>
+  <p style="font-size: 0.9rem; color: var(--soft); line-height: 1.7; margin-top: 1rem;">
+    Demostración de la pulsera funcionando con los LEDs encendidos al completarse el circuito, controlada mediante Arduino.
+  </p>
 </div>
 
 <!-- DIVISOR CONCLUSIONES -->
@@ -162,7 +182,6 @@
   </p>
 </div>
 
- 
 <footer>
   Copyright © 2026 IBERO · <a href="#">Huber Giron</a> · CC BY 4.0
 </footer>
