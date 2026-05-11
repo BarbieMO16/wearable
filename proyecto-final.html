@@ -3,81 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Proyecto Final — Wearable</title>
+<title>Resentir en Ciclo — Wearable</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --cafe: #7D4B46; --darkLILA: #514B5E;
-    --blue: #7A0A00; --blue-dark: #3B0702;
-    --bg: #FFE1DE; --text: #36060D; --soft: #AB717A;
-    --white: #ffffff; --radius: 20px;
-    --font: 'Nunito', sans-serif; --serif: 'Instrument Serif', serif;
+    --bg: #0e0608;
+    --surface: #1a0a0d;
+    --surface2: #221014;
+    --red: #6b0f1a;
+    --red-light: #9b1a28;
+    --red-muted: #4a0a12;
+    --text: #e8d5d8;
+    --soft: #9a7a80;
+    --white: #ffffff;
+    --radius: 20px;
+    --font: 'Nunito', sans-serif;
+    --serif: 'Instrument Serif', serif;
   }
   html { scroll-behavior: smooth; }
   body { font-family: var(--font); background: var(--bg); color: var(--text); min-height: 100vh; }
 
   nav {
     position: sticky; top: 0; z-index: 100;
-    background: rgba(253,251,254,0.92); backdrop-filter: blur(12px);
-    border-bottom: 1.5px solid #f0e8fb;
+    background: rgba(14,6,8,0.92); backdrop-filter: blur(12px);
+    border-bottom: 1px solid #2a1015;
     padding: 0 3rem; height: 64px;
     display: flex; align-items: center; justify-content: space-between;
   }
-  .nav-brand { font-family: var(--serif); font-style: italic; font-size: 1.4rem; color: var(--text); text-decoration: none; }
+  .nav-brand {
+    font-family: var(--serif); font-style: italic;
+    font-size: 1.4rem; color: var(--text); text-decoration: none;
+  }
   .back-btn {
     display: flex; align-items: center; gap: 6px;
     font-size: 0.85rem; font-weight: 700; color: var(--soft);
-    text-decoration: none; background: var(--lilac);
+    text-decoration: none; background: var(--surface2);
     padding: 7px 16px; border-radius: 50px;
-    border: 1.5px solid var(--lilac-dark);
+    border: 1px solid var(--red-muted);
     transition: all 0.2s;
   }
-  .back-btn:hover { background: var(--lilac-dark); color: var(--white); }
+  .back-btn:hover { background: var(--red-muted); color: var(--text); }
 
   .page-hero {
-    max-width: 760px; margin: 5rem auto 4rem;
+    max-width: 760px; margin: 6rem auto 5rem;
     text-align: center; padding: 0 2rem;
-    animation: floatIn 0.5s ease both;
+    animation: floatIn 0.6s ease both;
   }
-
   .featured-badge {
     display: inline-flex; align-items: center; gap: 6px;
-    background: linear-gradient(135deg, var(--lilac), var(--blue));
-    color: var(--lilac-dark); font-size: 0.78rem; font-weight: 800;
-    padding: 5px 16px; border-radius: 50px;
-    border: 1px solid var(--lilac-dark);
-    margin-bottom: 1.2rem; letter-spacing: 0.05em; text-transform: uppercase;
+    background: var(--red-muted); color: #c47a82;
+    font-size: 0.75rem; font-weight: 800;
+    padding: 5px 18px; border-radius: 50px;
+    border: 1px solid var(--red);
+    margin-bottom: 1.5rem; letter-spacing: 0.08em; text-transform: uppercase;
   }
-
   .page-hero h1 {
     font-family: var(--serif); font-style: italic;
-    font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 400;
-    color: var(--text); margin-bottom: 1rem;
+    font-size: clamp(2.8rem, 6vw, 4.2rem); font-weight: 400;
+    color: var(--text); margin-bottom: 0.8rem; line-height: 1.1;
   }
-  .page-hero p { font-size: 1rem; color: var(--soft); line-height: 1.8; max-width: 500px; margin: 0 auto; }
+  .page-hero .subtitle {
+    font-family: var(--serif); font-style: italic;
+    font-size: 1.1rem; color: var(--red-light);
+    margin-bottom: 1rem;
+  }
+  .page-hero .desc {
+    font-size: 0.95rem; color: var(--soft);
+    line-height: 1.8; max-width: 460px; margin: 0 auto;
+  }
+
+  .divider {
+    display: flex; align-items: center; gap: 1rem;
+    max-width: 700px; margin: 0 auto 2.5rem; padding: 0 2rem;
+  }
+  .divider-line { flex: 1; height: 1px; background: var(--red-muted); }
+  .divider-label {
+    font-size: 0.72rem; font-weight: 800; color: var(--red-light);
+    letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap;
+  }
 
   .coming-soon {
-    max-width: 500px; margin: 0 auto 8rem;
+    max-width: 520px; margin: 0 auto 8rem;
     text-align: center; padding: 3rem 2rem;
-    background: var(--white);
-    border: 2px solid var(--lilac-dark);
-    border-radius: var(--radius); animation: floatIn 0.5s 0.1s ease both;
+    background: var(--surface);
+    border: 1px dashed var(--red);
+    border-radius: var(--radius);
+    animation: floatIn 0.6s 0.15s ease both;
   }
-  .coming-soon .icon { font-size: 3rem; margin-bottom: 1rem; }
-  .coming-soon h2 { font-size: 1.1rem; font-weight: 800; color: var(--text); margin-bottom: 0.5rem; }
-  .coming-soon p { font-size: 0.9rem; color: var(--soft); line-height: 1.7; }
+  .coming-soon .icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .coming-soon h2 {
+    font-size: 1rem; font-weight: 800;
+    color: var(--text); margin-bottom: 0.5rem;
+    letter-spacing: 0.03em;
+  }
+  .coming-soon p { font-size: 0.88rem; color: var(--soft); line-height: 1.8; }
+
+  .tag {
+    display: inline-block;
+    background: var(--red-muted); color: #c47a82;
+    font-size: 0.7rem; font-weight: 800;
+    padding: 3px 12px; border-radius: 50px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
 
   footer {
-    background: var(--white); border-top: 1.5px solid #701807;
+    background: var(--surface); border-top: 1px solid #2a1015;
     padding: 1.5rem 3rem; text-align: center;
     font-size: 0.8rem; color: var(--soft);
   }
-  footer a { color: var(--lilac-dark); text-decoration: none; font-weight: 600; }
+  footer a { color: var(--red-light); text-decoration: none; font-weight: 600; }
 
   @keyframes floatIn {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
   }
 </style>
@@ -91,15 +131,15 @@
 
 <section class="page-hero">
   <div class="featured-badge">🥀 Proyecto Final 🥀</div>
-  <h1>Proyecto final</h1>
-  <p>Desarrollo completo.</p>
- <p>Resentir en ciclo</p>
+  <h1>Resentir en Ciclo</h1>
+  <p class="subtitle">Proyecto final — Wearable</p>
+  <p class="desc">Documentación completa del desarrollo: concepto, proceso de diseño, manufactura y resultado final.</p>
 </section>
 
 <div class="coming-soon">
-  <div class="icon">🏆</div>
+  <div class="icon">🥀</div>
   <h2>Contenido próximamente</h2>
-  <p>Aquí irá la documentación semanal del proyecto final: avances, decisiones de diseño, pruebas y resultado final.</p>
+  <p>Aquí irá la documentación semanal del proyecto: avances, decisiones de diseño, pruebas y resultado final.</p>
 </div>
 
 <footer>
